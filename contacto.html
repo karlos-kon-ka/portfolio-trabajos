@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio Web - Contacto</title>
+    <link rel="stylesheet" href="styles-contacto.css">
+</head>
+<body>
+
+    <header>
+        <h1>Contáctame</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <section id="formulario">
+        <h2>Contacta conmigo</h2>
+        <form action="https://formsubmit.co/carlos99.cp88secundaria@gmail.com" method="post">
+            <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <input type="hidden" name="_next" value="contacto.html">
+            <input type="hidden" name="_captchat" value="false">
+            </div>
+            <div class="campo">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <input type="hidden" name="_next" value="contacto.html">
+            <input type="hidden" name="_captchat" value="false">
+            </div>
+            
+            <button type="submit">Enviar</button>
+            
+
+        </form>
+    </section>
+
+    <footer>
+        <div class="redes-sociales">
+            <a href="https://www.instagram.com/karloskon_ka/" target="_blank">
+                <img src="Logo-Instagram-PNG.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.linkedin.com/in/carlos-p-26034328b/" target="_blank">
+                <img src="linkedin.png" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
