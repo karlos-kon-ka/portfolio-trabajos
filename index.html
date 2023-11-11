@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-Frame-Options" content="DENY">
 
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Roboto+Mono:ital,wght@1,200&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&display=swap" rel="stylesheet">
@@ -14,6 +19,11 @@
 <body>
 
     <header id="myHeader">
+        <div class="header-balls">
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+        </div>
         <h1>PORTFOLIO</h1>
         <nav>
             <a href="index.html">Inicio</a>
@@ -22,17 +32,21 @@
     </header>
 <br>
 <section id="inicio">
-    <h2>Bienvenidos <br>
-        Presento mis proyectos de lenguaje básico. <br>
-        A continuacion, puedes ver los códigos que con los que trabajo.
-     </h2>
+    <div class="welcome-text">
+        <h2>Bienvenidos</h2>
+        <p>Te presento mis proyectos desarrollados con lenguajes básicos. A continuación, puedes explorar los códigos con los que trabajo.</p>
+    </div>
     <div class="logo-container">
-        <img class="foto" src="20231106_203313.jpg" alt="Logo de la empresa">
+        <img id="miFoto"  class="foto" src="20231106_203313.jpg" alt="Logo de la empresa">
+       
+        
+        
+        
     </div>
 </section>
 
     <section id="proyectos">
-        <h2>Proyectos</h2>
+        <h2>PROYECTOS</h2>
         <div class="proyecto">
             <h3>1·PROYECTO </h3>
             <p>Registro de usuarios. <br>
@@ -44,9 +58,9 @@
         <br>
         <div class="proyecto">
             <h3>2·PROYECTO </h3>
-            <p>Calculaora básica hecho con: HTML - CSS Y JS.</p>
+            <p>Calculadora hecho con: HTML - CSS Y JS.</p>
             <a target="_blank"  href="https://karlos-kon-ka.github.io/calculadora/">
-                <img class="foto-registro" src="CALCULADORA.avif" alt="Proyecto 1">
+                <img class="foto-registro" src="CALCULADORA.avif" alt="Proyecto 1"></a>
         </div>
         <br>
         <div class="proyecto">
@@ -57,22 +71,46 @@
                 Diseñada con JavaScript, HTML y CSS.             
             </p>
             <a target="_blank"  href="https://karlos-kon-ka.github.io/appweb/">
-                <img class="foto-registro" src="28753ddf79d70042ba86564947e13bf5.png" alt="Proyecto 1">
+                <img class="foto-registro" src="28753ddf79d70042ba86564947e13bf5.png" alt="Proyecto 1"></a>
         </div>
         <!-- Puedes agregar más proyectos aquí -->
     </section>
 
 
     <section id="presentacion-habilidades">
-        <h2>Sobre Mí</h2>
-        <img src="fotomia.jpg" alt="Tu Foto" class="foto">
+        <h2>¿Quien soy?</h2>
+        <img src="fotomia.jpg" alt="Tu Foto" class="foto2">
+        
+        
         <p>Mi nombre es Karlos y soy un apasionado del desarrollo web. Con experiencia en crear y diseñar sitios webs con dinamismo y funcionalidad, me esfuerzo por crear soluciones efectivas y atractivas para los desafíos del mundo real.</p>
 
-        <h2>Habilidades</h2>
+        
         
     </section>
 
+
+
+
+    <section id="galeria">
+        <h2>Otros intereses.</h2>
+        <div class="gallery-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/BYM8m3TywBM?si=INMeq6vGQGHW7hns" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/eBFucOvWegg?si=itCuw6pEQCixt4xk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LUTDdDwU0Uk?si=iJPj92DPte4VFOG_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <!-- Agrega más imágenes según sea necesario -->
+        </div>
+    </section>
+
+
+
+
+
     <script src="script.js"></script>
+
+
+    <button id="scrollToTopBtn" onclick="scrollToTop()">
+        <span class="arrow">&#9650;</span>
+    </button>
 
 </body>
 </html>

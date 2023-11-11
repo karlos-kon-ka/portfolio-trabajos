@@ -7,8 +7,8 @@ body {
 }
 
 header {
-    background-color: #771313;
-    padding: 15px 20px; /* Ajuste el espaciado según sus preferencias */
+    background-color: #a52626;
+    padding: 15px 20px;
     text-align: center;
     position: fixed;
     width: 100%;
@@ -18,10 +18,76 @@ header {
     animation: bounceOnce 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
-header h1{
+header h1 {
     font-family: 'EB Garamond', serif;
 }
 
+#inicio {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.welcome-text {
+    margin-bottom: 30px;
+}
+
+.welcome-text h2 {
+    color: #333;
+    font-size: 28px;
+}
+
+.welcome-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.foto {
+    max-width: 100%;
+    width: 230px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+#miFoto {
+    /* Estilos normales de la imagen */
+    transition: transform 0.3s ease-in-out;
+}
+
+#miFoto.zoomed {
+    transform: scale(1.1);
+}
+
+
+@media screen and (max-width: 480px) {
+    .foto {
+        width: calc(50% - 20px);
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .foto {
+        width: 100%;
+        margin: 5px;
+    }
+}
 @keyframes bounceOnce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -47,6 +113,8 @@ nav {
 nav a {
     text-decoration: none;
     color: #fff;
+    font-family: 'Playfair Display', serif;
+font-family: 'Roboto Mono', monospace;
     font-size: 18px;
     margin: 0 20px;
     transition: color 0.3s ease;
@@ -105,24 +173,253 @@ h2, p {
 
 @media screen and (max-width: 600px) {
     header {
-        padding: 10px; /* Ajuste el espaciado según sus preferencias */
+        padding: 10px;
     }
 
     nav a {
         font-size: 16px;
         margin: 0 10px;
     }
+}
 
-    .container {
-        width: 90%;
-    }
+#inicio {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-text {
+    margin-bottom: 30px;
+}
+
+.welcome-text h2 {
+    color: #333;
+    font-size: 28px;
+}
+
+.welcome-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#presentacion-habilidades {
+    text-align: center;
+}
+
+#presentacion-habilidades img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin: 20px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#presentacion-habilidades p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#presentacion-habilidades h2 {
+    color: #333;
+    margin-top: 40px;
+}
+
+#galeria {
+    background-color: #333;
+    padding: 60px 20px;
+    text-align: center;
+    color: #dcfdf7;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+iframe {
+    width: 100%;
+    max-width: 350px;
+    max-height: 400px;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+iframe:hover {
+    transform: scale(1.05);
+}
+
+.foto2 {
+    max-width: 100%;
+    width: 230px;
+    height: 220px;
+    border-radius: 10px;
+    margin-top: 20vh;
+}
+
+#presentacion-habilidades h2 {
+    color: #00ffcc;
 }
 
 
-/* Estilo para la lista desordenada */
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+#presentacion-habilidades {
+    text-align: center;
 }
+
+#presentacion-habilidades img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin: 20px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#presentacion-habilidades p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#presentacion-habilidades h2 {
+    color: #333;
+    margin-top: 40px;
+}
+
+
+
+
+
+
+
+
+
+#galeria {
+    background-color: #333;
+    padding: 60px 20px;
+    text-align: center;
+    color: #dcfdf7;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.gallery-container img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/******/
+#galeria {
+    text-align: center;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+iframe {
+    width: 100%;
+    max-width: 350px;
+    max-height: 400px;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+iframe:hover {
+    transform: scale(1.05);
+}
+
+
+.foto2{
+    max-width: 100%;
+    width: 230px; /* Cambiado de max-height a max-width */
+    height: 220px; /* Hacer que la altura se ajuste proporcionalmente al ancho */
+    border-radius: 10px;
+    margin-top: 20vh;
+    
+}
+
+
+#presentacion-habilidades h2{
+    color: #00ffcc;
+}
+
+
+
+
+
+
+
+
+/*boton subida
+*/
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #57c5edda; /* Color del botón */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: opacity 0.2s ease-in-out;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #451bff; /* Cambia el color al pasar el ratón sobre el botón */
+}
+
+#scrollToTopBtn.show {
+    opacity: 1;
+}
+
+
 
