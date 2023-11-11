@@ -7,19 +7,37 @@ body {
 }
 
 header {
-    background-color: #ae7676;
-    padding: 10px;
+    background-color: #771313;
+    padding: 15px 20px; /* Ajuste el espaciado según sus preferencias */
     text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(253, 252, 252, 0.1);
+    animation: bounceOnce 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+header h1{
+    font-family: 'EB Garamond', serif;
+}
+
+@keyframes bounceOnce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
 }
 
 a {
     text-decoration: none;
 }
+
 nav {
     display: flex;
     justify-content: center;
@@ -47,8 +65,9 @@ section {
 }
 
 h2, p {
-    color: #00ffcc; /* Color cyan neón */
-    font-family: Arial, Helvetica, sans-serif;
+    color: #dcfdf7; /* Color cyan neón */
+    font-family: 'EB Garamond', serif;
+    font-size: 25px;
 }
 
 #proyectos {
@@ -65,25 +84,45 @@ h2, p {
 
 .proyecto h3 {
     color: #00ffcc;
+    font-family: 'EB Garamond', serif;
 }
-.foto{
-    max-height: 100%;
-    height: 200px;
-    max-width: 120%;
-    width: 150px;
+
+.foto {
+    max-width: 100%;
+    width: 230px; /* Cambiado de max-height a max-width */
+    height: 220px; /* Hacer que la altura se ajuste proporcionalmente al ancho */
     border-radius: 10px;
 }
-.foto-registro{
-    height: 400px;
-    width: 400px;
+
+.foto-registro {
+    max-width: 100%; /* Cambiado de width a max-width */
+    max-height: 100%;
+    width: 300px;
+    height: 280px; /* Hacer que la altura se ajuste proporcionalmente al ancho */
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
-
-
 @media screen and (max-width: 600px) {
+    header {
+        padding: 10px; /* Ajuste el espaciado según sus preferencias */
+    }
+
+    nav a {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+
     .container {
         width: 90%;
     }
 }
+
+
+/* Estilo para la lista desordenada */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+

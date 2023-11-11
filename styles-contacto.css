@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #2a2a2a;
+    background-color: #4c6e11;
     padding: 10px;
     text-align: center;
     position: fixed;
@@ -15,12 +15,25 @@ header {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease; /* Añadida transición al color de fondo */
+}
+
+header:hover {
+    background-color: #3c5e0a; /* Cambia el color de fondo al pasar el ratón */
 }
 
 nav {
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    opacity: 0; /* Inicialmente, la opacidad está configurada a 0 */
+    transform: translateY(-20px); /* Movida hacia arriba */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Añadidas transiciones */
+}
+
+header:hover nav {
+    opacity: 1; /* Muestra la barra de navegación */
+    transform: translateY(0); /* Muestra la barra de navegación */
 }
 
 nav a {
@@ -104,7 +117,7 @@ footer {
     width: 40px; /* Ajusta el tamaño según sea necesario */
     height: 40px; /* Ajusta el tamaño según sea necesario */
 }
-form input{
+
+form input {
     background-color: rgb(99, 99, 99);
-    
 }
