@@ -37,7 +37,7 @@ header {
     opacity: 1; /* Establece la opacidad inicial a 1 */
     transition: opacity 0.5s ease; /* Agrega una transición de opacidad con duración de 0.5 segundos y función de tiempo ease */
 }
-}
+
 
 header h1 {
     font-family: 'EB Garamond', serif;

@@ -42,6 +42,24 @@ function scrollFunction() {
         header.classList.remove("hidden");
     }
 }
+// Almacena la altura del header
+var headerHeight = document.querySelector('header').offsetHeight;
+
+// Función para manejar el evento de desplazamiento
+function handleScroll() {
+    // Obtiene la posición actual del desplazamiento
+    var scrollPosition = window.scrollY || window.pageYOffset;
+
+    // Aplica la clase header-hidden si el desplazamiento es mayor que la altura del header
+    if (scrollPosition > headerHeight) {
+        document.querySelector('header').classList.add('header-hidden');
+    } else {
+        document.querySelector('header').classList.remove('header-hidden');
+    }
+}
+
+// Agrega el evento de desplazamiento al documento
+document.addEventListener('scroll', handleScroll);
 
 // Restaurar la barra de navegación cuando se hace clic en el botón de subir
 document.getElementById("scrollToTopBtn").addEventListener("click", function () {
@@ -103,5 +121,37 @@ $(document).ready(function() {
     // Agregar evento al botón para agregar objetivos
     $("#agregarObjetivo").on("click", function() {
         agregarCampoObjetivo();
+    });
+});
+
+
+// Función para manejar el evento de desplazamiento
+function handleScroll() {
+    // Obtiene la posición actual del desplazamiento
+    var scrollPosition = window.scrollY || window.pageYOffset;
+
+    // Calcula la opacidad en función de la posición de desplazamiento
+    var opacity = 1 - (scrollPosition / headerHeight);
+
+    // Asegura que la opacidad esté en el rango de 0 a 1
+    opacity = Math.min(1, Math.max(0, opacity));
+
+    // Actualiza la opacidad del header
+    document.querySelector('header').style.opacity = opacity;
+}
+
+// Agrega el evento de desplazamiento al documento
+document.addEventListener('scroll', handleScroll);
+/**optimizacion */
+$(document).ready(function() {
+    var header = $('#myHeader');
+    var headerHeight = header.outerHeight();
+
+    $(window).scroll(function() {
+        var scrollPosition = $(this).scrollTop();
+
+        var opacity = Math.max(0, 1 - (scrollPosition / headerHeight));
+
+        header.css('opacity', opacity.toFixed(2));
     });
 });
