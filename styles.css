@@ -2,27 +2,30 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    color: #fff;
-    animation: changeColor 6s infinite;
+    background-color: #616161;
+    color: white;
+    animation: colorChange 4.5s infinite;
+   
+    
 }
-
-@keyframes changeColor {
+@keyframes colorChange {
     0% {
-        background-color: #000000;
+        background-color: #333; /* Color inicial */
     }
     25% {
-        background-color: #b8b8b8;
+        background-color: #967c7c; /* Color a los 25% de la animación */
     }
     50% {
-        background-color: #ffffff;
+        background-color: #56a984; /* Color a los 50% de la animación */
     }
     75% {
-        background-color: #5c5c5c;
+        background-color: #50b2f3; /* Color a los 75% de la animación */
     }
     100% {
-        background-color: #000000;
+        background-color: #333; /* Color final */
     }
 }
+
 
 header {
     background-color: #ae3a3a;
@@ -44,33 +47,90 @@ header h1 {
 }
 
 #inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 60px 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-#inicio .foto {
-    cursor: pointer; /* Cambia el cursor al pasar sobre la foto */
 }
 
 .welcome-text {
     margin-bottom: 30px;
 }
 
-.welcome-text h2 {
-    color: #333;
-    font-size: 28px;
+article {
+    position: relative;
+    width: 250px;
+    transition: all 0.3s ease;
+    justify-content: center;
+    align-items: center;
 }
 
-.welcome-text p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto;
+article img:first-child {
+    box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
+    border-radius: 4px;
+    object-fit: cover;
+    width: 100%;
+    transition: opacity 0.6s ease; /* Agregamos una transición para la propiedad de opacidad */
+    opacity: 1; /* Establecemos la opacidad inicial a 1 */
 }
+article:hover img:first-child {
+    opacity: 0; /* Cuando se pasa el mouse, la primera imagen se vuelve invisible */
+}
+
+article img:last-child {
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: opacity 0.9s ease; /* Agregamos una transición para la propiedad de opacidad */
+    opacity: 0;
+}
+
+article:hover {
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+
+article::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 10%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0) 95%
+    );
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+article:hover::before {
+    opacity: 1;
+}
+
+article:hover img:last-child {
+    opacity: 1; /* Cuando se pasa el mouse, la segunda imagen se vuelve visible */
+}
+
+article:hover img:last-child {
+    opacity: 1;
+    transform: translateZ(10%);
+}
+
+/* Agregamos el siguiente estilo para que la segunda imagen desaparezca difuminadamente */
+article img:last-child.fade-out {
+    opacity: 0;
+}
+
+article:hover img:last-child.fade-out {
+    opacity: 1;
+}
+
 
 .logo-container {
     display: flex;
@@ -82,14 +142,14 @@ header h1 {
 .foto {
     max-width: 100%;
     width: 230px;
-    height: auto;
-    border-radius: 10px;
+    height: 40vh;
+    border-radius: 20px;
     margin: 10px;
     position: relative;
     z-index: 2;
 }
 #inicio .foto {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.7s ease-in-out;
 }
 
 #inicio .foto:hover {
@@ -118,17 +178,6 @@ header.hidden {
         margin: 5px;
     }
 }
-@keyframes bounceOnce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
-}
 
 a {
     text-decoration: none;
@@ -147,7 +196,7 @@ nav a {
 font-family: 'Roboto Mono', monospace;
     font-size: 23px;
     margin: 0 20px;
-    transition: color 0.3s ease;
+    transition: color 0.5s ease;
 }
 
 nav a:hover {
@@ -185,12 +234,7 @@ h2, p {
     font-family: 'EB Garamond', serif;
 }
 
-.foto {
-    max-width: 100%;
-    width: 230px; /* Cambiado de max-height a max-width */
-    height: 220px; /* Hacer que la altura se ajuste proporcionalmente al ancho */
-    border-radius: 10px;
-}
+
 
 .foto-registro {
     max-width: 100%; /* Cambiado de width a max-width */
@@ -274,18 +318,23 @@ h2, p {
     margin-top: 40px;
 }
 
-#galeria {
-    background-color: #333;
-    padding: 60px 20px;
-    text-align: center;
-    color: #dcfdf7;
-}
 
+
+/* Estilos generales de la galería */
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     justify-content: center;
+}
+
+/* Estilos específicos para pantallas pequeñas (smartphones) */
+@media screen and (max-width: 767px) {
+    .gallery-container {
+        grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
+        margin: 0 auto; /* Centra la galería en pantallas pequeñas */
+        max-width: 80%; /* Puedes ajustar el ancho máximo según tus necesidades */
+    }
 }
 
 iframe {
@@ -303,13 +352,7 @@ iframe:hover {
     transform: scale(1.05);
 }
 
-.foto2 {
-    max-width: 100%;
-    width: 230px;
-    height: 220px;
-    border-radius: 10px;
-    margin-top: 20vh;
-}
+
 
 #presentacion-habilidades h2 {
     color: #00ffcc;
@@ -322,9 +365,11 @@ iframe:hover {
 
 #presentacion-habilidades img {
     max-width: 100%;
-    height: auto;
-    border-radius: 50%;
+    height: 25vh;
+    width: 30vh;
+    border-radius: 5%;
     margin: 20px 0;
+    box-shadow: white 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -346,12 +391,17 @@ iframe:hover {
 }
 
 
+.foto-objetivos{
+    max-width: 100% ;
+    max-height: 100%;
+    height: 26vh;
+    width: 30vh;
+    margin: 10px;
+    border-radius: 10px;
+    border: 0.5px solid white;
+    box-shadow: 2px 2px 2px 2px #2a2a2a;
+    
 
-#galeria {
-    background-color: #333;
-    padding: 60px 20px;
-    text-align: center;
-    color: #dcfdf7;
 }
 
 .gallery-container {
@@ -374,6 +424,12 @@ iframe:hover {
 /******/
 #galeria {
     text-align: center;
+    background-image: url(pexels-freestocksorg-34407.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    
 }
 
 .gallery-container {
@@ -405,10 +461,11 @@ iframe:hover {
     height: 220px; /* Hacer que la altura se ajuste proporcionalmente al ancho */
     border-radius: 10px;
     margin-top: 20vh;
+    box-shadow: 2px 2px 2px 2px rgb(16, 5, 5);
     
 }
 .miseccion{
-    background-image: url(pexels-adrien-olichon-2387793.jpg);
+    background-image: url(pexels-jot-singh-2179483.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -416,7 +473,7 @@ iframe:hover {
 }
 
 #presentacion-habilidades h2{
-    color: #fcfcfc;
+    color: rgb(51, 24, 24);
 }
 
 
@@ -426,9 +483,10 @@ iframe:hover {
 #scrollToTopBtn {
     display: none;
     position: fixed;
-    bottom: 20px;
+    bottom: 40px;
     right: 20px;
     background-color: #57c5edda; /* Color del botón */
+    box-shadow: 1px 1px 1px 1px black;
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -439,7 +497,7 @@ iframe:hover {
 }
 
 #scrollToTopBtn:hover {
-    background-color: #451bff; /* Cambia el color al pasar el ratón sobre el botón */
+    background-color: #a596e6; /* Cambia el color al pasar el ratón sobre el botón */
 }
 
 #scrollToTopBtn.show {
@@ -447,37 +505,50 @@ iframe:hover {
 }
 
 
+/* Estilos para la sección de objetivos */
 #objetivos {
-    background-color: #292929;
-    padding: 20px;
+    
+    
+    padding: 40px;
     border-radius: 8px;
+    text-align: center;
+    background-image: url(pexels-anna-nekrashevich-8534228.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.objetivo {
-    margin-bottom: 10px;
+
+
+#objetivosList {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+li{
+    font-size: 29px;
+    font-family: 'EB Garamond', serif;
+    color: #3d1111;
+    margin: 10px;
+    background-color: #23e2ffe1;
     padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    border-radius: 10px;
+
+
+}
+.objetivo {
+    
+    margin: 10px 0;
+    padding: 15px;
     border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    color: #ffffff;
 }
-
-textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-button.eliminarObjetivo {
-    background-color: #dc3545;
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button.eliminarObjetivo:hover {
-    background-color: #c82333;
+#objetivos h2{
+    color: rgb(51, 24, 24);
 }

@@ -2,6 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Roboto+Mono:ital,wght@1,200&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-Frame-Options" content="DENY">
 
@@ -11,7 +14,7 @@
 <body>
 
     <header>
-        <h1>Contáctame</h1>
+        <h1>CONTÁCTAME</h1>
         <nav>
             <a href="index.html">Inicio</a>
             <a href="contacto.html">Contacto</a>
@@ -32,6 +35,10 @@
                 <input type="email" id="email" name="email" required>
                 <input type="hidden" name="_next" value="contacto.html">
             <input type="hidden" name="_captchat" value="false">
+            </div>
+            <div class="campo">
+                <label for="comentario">Comentario:</label>
+                <textarea placeholder="OPCIONAL" id="comentario" name="comentario" rows="4" required></textarea>
             </div>
             
             <button type="submit">Enviar</button>
