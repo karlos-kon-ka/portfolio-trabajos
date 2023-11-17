@@ -200,7 +200,8 @@ nav a:hover {
 section {
     padding: 60px 20px;
     background-color: #333;
-    border-top: 2px solid rgb(39, 160, 61);
+    border: 2px solid rgb(39, 160, 61);
+    border-radius: 5px;
     text-align: center;
     margin-top: 70px;
 }
@@ -331,21 +332,6 @@ h2, p {
     }
 }
 
-iframe {
-    width: 100%;
-    max-width: 350px;
-    max-height: 400px;
-    height: 100%;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-iframe:hover {
-    transform: scale(1.05);
-}
-
 
 
 #presentacion-habilidades h2 {
@@ -355,17 +341,9 @@ iframe:hover {
 
 #presentacion-habilidades {
     text-align: center;
+    background-color: white;
 }
 
-#presentacion-habilidades img {
-    max-width: 100%;
-    height: 25vh;
-    width: 30vh;
-    border-radius: 5%;
-    margin: 20px 0;
-    box-shadow: white 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
 
 #presentacion-habilidades p {
     font-size: 18px;
@@ -393,7 +371,7 @@ iframe:hover {
     margin: 10px;
     border-radius: 10px;
     border: 0.5px solid white;
-    box-shadow: 2px 2px 2px 2px #2a2a2a;
+    box-shadow: 2px 2px 2px 2px #171717;
     
 
 }
@@ -405,14 +383,6 @@ iframe:hover {
     margin-top: 20px;
 }
 
-.gallery-container img {
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
 
 
 /******/
@@ -458,16 +428,9 @@ iframe:hover {
     box-shadow: 2px 2px 2px 2px rgb(16, 5, 5);
     
 }
-.miseccion{
-    background-image: url(pexels-jot-singh-2179483.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    
-}
 
 #presentacion-habilidades h2{
-    color: rgb(51, 24, 24);
+    color: rgb(24, 70, 19);
 }
 
 
@@ -500,49 +463,37 @@ iframe:hover {
 
 
 /* Estilos para la sección de objetivos */
+/* Estilos para la sección de objetivos */
 #objetivos {
-    
-    
-    padding: 40px;
-    border-radius: 8px;
     text-align: center;
-    background-image: url(pexels-anna-nekrashevich-8534228.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    padding: 50px 0;
+    background-color: #6cc3fd
 }
 
-
+#objetivos h2 {
+    font-size: 2.5em;
+    color: #333333;
+    margin-bottom: 20px;
+}
 
 #objetivosList {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
-li{
-    font-size: 29px;
+
+#objetivosList li {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
     font-family: 'EB Garamond', serif;
-    color: #3d1111;
-    margin: 10px;
-    background-color: #23e2ffe1;
-    padding: 10px;
+    font-size: 30px;
+    color: #333;
+}
+
+.foto-objetivos {
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
-
-
-}
-.objetivo {
-    
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 400px;
-    text-align: center;
-    color: #ffffff;
-}
-#objetivos h2{
-    color: rgb(51, 24, 24);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
 }

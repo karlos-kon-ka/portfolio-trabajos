@@ -60,14 +60,9 @@
         var header = document.getElementById("myHeader");
         header.classList.remove("hidden"); // Elimina la clase "hidden" para mostrar suavemente la barra de navegación
     });
-/**zoomeo */
-document.getElementById("miFoto").addEventListener("mouseout", function() {
-    this.style.transform = "scale(1)";
-});
-;
 
 
-/**animacion */
+
 
 
 
