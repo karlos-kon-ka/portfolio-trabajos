@@ -187,20 +187,21 @@ nav a {
     text-decoration: none;
     color: #fff;
     font-family: 'Playfair Display', serif;
-font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto Mono', monospace;
     font-size: 23px;
     margin: 0 20px;
     transition: color 0.5s ease;
 }
 
 nav a:hover {
-    color: #23e2ff; /* Color cyan neón */
+    color: #11fd87; /* Color cyan neón */
 }
 
 section {
     padding: 60px 20px;
     background-color: #333;
-    border: 2px solid rgb(39, 160, 61);
+    border-top: 2px solid rgb(39, 160, 61);
+    border-bottom:  2px solid rgb(39, 160, 61);;
     border-radius: 5px;
     text-align: center;
     margin-top: 70px;
@@ -469,7 +470,9 @@ iframe:hover {
     padding: 50px 0;
     background-color: #6cc3fd
 }
-
+#objetivos p{
+    background-color: #11fd87;
+}
 #objetivos h2 {
     font-size: 2.5em;
     color: #333333;
@@ -481,6 +484,10 @@ iframe:hover {
     padding: 0;
 }
 
+
+
+
+
 #objetivosList li {
     font-size: 1.2em;
     line-height: 1.6;
@@ -488,6 +495,8 @@ iframe:hover {
     font-family: 'EB Garamond', serif;
     font-size: 30px;
     color: #333;
+    
+    
 }
 
 .foto-objetivos {
