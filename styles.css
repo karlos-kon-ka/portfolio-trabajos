@@ -284,10 +284,7 @@ h2, p {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#presentacion-habilidades {
-    background-color: rgb(163, 163, 163);
-    text-align: center;
-}
+
 
 #presentacion-habilidades img {
     max-width: 100%;
@@ -297,17 +294,7 @@ h2, p {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-#presentacion-habilidades p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #555;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f8f8f8;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+
 
 #presentacion-habilidades h2 {
     color: #333;
@@ -468,14 +455,12 @@ iframe:hover {
 #objetivos {
     text-align: center;
     padding: 50px 0;
-    background-color: #6cc3fd
+    background-color: #424242
 }
-#objetivos p{
-    background-color: #11fd87;
-}
+
 #objetivos h2 {
     font-size: 2.5em;
-    color: #333333;
+    color: #dbd9d9;
     margin-bottom: 20px;
 }
 
@@ -485,24 +470,30 @@ iframe:hover {
 }
 
 
-
-
-
-#objetivosList li {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    font-family: 'EB Garamond', serif;
-    font-size: 30px;
-    color: #333;
+.parrafo-background {
+    background-color: peru;
+    border-radius: 8px;
+    margin: 0;
+    
+    
+}
+.parrafo-background p {
+    
+    color: #171717;
+    background-color: #00ffcc;
+    border: 1px solid;
+    border-radius: 15px;
+    margin: 20px;
     
     
 }
 
+
+span{
+    color: white;
+}
 .foto-objetivos {
     max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
+    width: 35vh; 
+    border-radius: 6px; 
 }
