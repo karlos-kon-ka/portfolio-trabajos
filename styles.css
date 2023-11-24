@@ -4,7 +4,7 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #616161;
     color: white;
-    animation: colorChange 5.5s infinite;
+    animation: colorChange 14.5s infinite;
 }
 
 @keyframes colorChange {
@@ -15,10 +15,10 @@ body {
         background-color: #ffffff; /* Color a los 25% de la animación */
     }
     50% {
-        background-color: #ccd2cf; /* Color a los 50% de la animación */
+        background-color: #ea2d2d; /* Color a los 50% de la animación */
     }
     75% {
-        background-color: #6cc3fd; /* Color a los 75% de la animación */
+        background-color: #333; /* Color a los 75% de la animación */
     }
 }
 
@@ -46,6 +46,12 @@ header h1 {
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+#proyectos p{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    
 }
 
 .welcome-text {
@@ -200,19 +206,22 @@ nav a:hover {
 section {
     padding: 60px 20px;
     background-color: #333;
-    border-top: 2px solid rgb(39, 160, 61);
-    border-bottom:  2px solid rgb(39, 160, 61);;
+  
     border-radius: 5px;
     text-align: center;
     margin-top: 70px;
 }
 
-h2, p {
-    color: #dcfdf7; /* Color cyan neón */
+h2{
+    color: #dcfdf7d0; /* Color cyan neón */
     font-family: 'EB Garamond', serif;
     font-size: 25px;
 }
-
+p{
+    font-family: 'EB Garamond', serif;
+    font-size: 25px;  
+    color: #2a2a2a;
+}
 #proyectos {
     text-align: center;
 }
@@ -238,9 +247,12 @@ h2, p {
     width: 300px;
     height: 280px; /* Hacer que la altura se ajuste proporcionalmente al ancho */
     border-radius: 10px;
+    transition: transform 0.3s;
     margin-bottom: 10px;
 }
-
+.foto-registro:hover{
+    transform: scale(1.1); 
+}
 @media screen and (max-width: 600px) {
     header {
         padding: 10px;
@@ -391,20 +403,7 @@ h2, p {
     justify-content: center;
 }
 
-iframe {
-    width: 100%;
-    max-width: 350px;
-    max-height: 400px;
-    height: 100%;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
 
-iframe:hover {
-    transform: scale(1.05);
-}
 
 
 .foto2{
@@ -455,7 +454,7 @@ iframe:hover {
 #objetivos {
     text-align: center;
     padding: 50px 0;
-    background-color: #424242
+    background-color: #464714
 }
 
 #objetivos h2 {
@@ -479,11 +478,12 @@ iframe:hover {
 }
 .parrafo-background p {
     
-    color: #171717;
+    color: #422727;
     background-color: #00ffcc;
     border: 1px solid;
     border-radius: 15px;
     margin: 20px;
+    padding: 7px;
     
     
 }
@@ -494,6 +494,11 @@ span{
 }
 .foto-objetivos {
     max-width: 100%;
-    width: 35vh; 
-    border-radius: 6px; 
+    width: 250px; /* Tamaño inicial de las imágenes */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+/* Efecto de zoom al pasar el mouse */
+.foto-objetivos:hover {
+    transform: scale(1.1); /* Escala aumentada para el efecto de zoom */
 }
