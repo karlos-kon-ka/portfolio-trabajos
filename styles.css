@@ -51,7 +51,7 @@ header h1 {
     text-align: center;
 }
 #proyectos p{
-    background-color: #ffffff;
+    
     border-radius: 10px;
     padding: 10px;
     
@@ -223,7 +223,7 @@ h2{
 p{
     font-family: 'EB Garamond', serif;
     font-size: 25px;  
-    color: #2a2a2a;
+    color: #e4e3e3;
 }
 #proyectos {
     text-align: center;
@@ -461,14 +461,14 @@ p{
 
 #objetivos h2 {
     font-size: 2.5em;
-    color: #dbd9d9;
+    color: #170b0b;
     margin-bottom: 20px;
 }
 
 
 
 .parrafo-background {
-    background-color: rgb(235, 200, 166);
+    background-color: rgb(225, 135, 45);
     border-radius: 8px;
     margin: 0;
     
@@ -514,4 +514,18 @@ span{
 .adicionales img:hover{
     transform: scale(1.1);
 
+}
+
+
+
+/***/
+
+/* Estilo base para la sección */
+/* Estilo base para los divs proyecto */
+.proyecto {
+    transition: background-color 0.3s ease;
+}
+
+.proyecto:hover {
+    background-color: rgb(207, 70, 70); /* Cambia este color al que desees */
 }

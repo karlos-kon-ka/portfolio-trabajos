@@ -81,6 +81,7 @@ function handleScroll() {
     document.querySelector('header').style.opacity = opacity;
 }
 
+/****zoom seccion */
 
 
 
