@@ -411,8 +411,10 @@ p{
 
 .foto2{
     max-width: 100%;
-    width: 230px; /* Cambiado de max-height a max-width */
-    height: 220px; /* Hacer que la altura se ajuste proporcionalmente al ancho */
+    width: 200px; 
+    height: 100%;
+
+    height: 250px; 
     border-radius: 10px;
     margin-top: 20vh;
     box-shadow: 2px 2px 2px 2px rgb(16, 5, 5);
@@ -530,12 +532,5 @@ span{
     background-color: rgb(207, 70, 70); /* Cambia este color al que desees */
 }
 
-.miseccion img{
- width:100%;
-height:100%;
-max-width:200px;
-max-height:300px;
-border-radius:10px;
-}
 
     
