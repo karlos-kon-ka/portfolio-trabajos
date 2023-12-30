@@ -529,3 +529,11 @@ span{
 .proyecto:hover {
     background-color: rgb(207, 70, 70); /* Cambia este color al que desees */
 }
+.miseccion img{
+width:100%;
+height100%;
+max-width:200px;
+max-height:200px;
+}
+
+    
