@@ -2,9 +2,18 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Roboto+Mono:ital,wght@1,200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&display=swap" rel="stylesheet">
 </head>
@@ -13,42 +22,61 @@
     <header id="myHeader">
         <h1>PORTFOLIO</h1>
         <nav>
-            <a href="index.html">Inicio</a>
-            <a href="contacto.html">Contacto</a>
+            <a class="enlaces-pag" href="index.html">Inicio</a>
+            <a  class="enlaces-pag" href="contacto.html">Contacto</a>
         </nav>
     </header>
+     
+    <div class="slider">
+        <ul>
+            <li><img class="fotos-len" src="Python.svg.png" alt=""></li>
+            <li><img class="fotos-len" src="flask.png" alt=""></li>
+            <li><img class="fotos-len" src="tkinter.png" alt=""></li>
+            <li><img class="fotos-len" src="php.png" alt=""></li>
+            <li><img class="fotos-len" src="28753ddf79d70042ba86564947e13bf5.png" alt=""></li>
+            
+        </ul>
+    </div>
     
-    <section id="inicio">
-        <div class="welcome-text">
-            <h2>Bienvenidos</h2>
-            <p>Proyectos desarrollados con lenguajes HTML, CSS, JavaScript entre otros.<br>A continuación, puedes explorar los trabajos.</p>
-        </div>
-        <article>
-            <img src="20231106_203313.jpg" alt="Imagen 1" class="foto">
-            <img src="pexels-sachith-ravishka-kodikara-5971304.jpg" alt="Imagen 2" class="foto">
-        </article>
-    </section>
+    <div class="personal">
+        <img src="fotomia.jpg" alt="">
+       
+        <p>Soy un joven dedicado al desarrollo de software, con un año de experiencia comprobada en programación. Poseedor de habilidades avanzadas en inglés, demostrables. Activo en la búsqueda de oportunidades laborales. Comprometido con el
+             aprendizaje continuo y apasionado por la ingeniería de software</p>
+             <h2>Identidad y Función: <span>¿QUIÉN SOY Y QUÉ HAGO?</span></h2>
+    
+    </div>
+    
+ 
 
-    <section  id="proyectos">
-        <h2>PROYECTOS</h2>
+    <div class="titulos">
+        <h4>TRABAJOS</h4>
+    </div>
+        
+      <div class="trabajos">
+        
+               
         <div class="proyecto">
-            <h3>1·PROYECTO</h3>
-            <p>Simulación de registros de cuentas. <br>
-                Inicio de sesión de cuentas web. Asigna usuarios y permite la entrada a la web. <br>
-                Utilizo: HTML - CSS Y JavaScript</p>
+            <h3>BLOG </h3>
+            <p>Blog personal<br>
+                He creado un blog dinámico utilizando PHP <br> Un sistema de gestión de contenido que permite a los usuarios registrarse,
+                 iniciar sesión de forma segura y publicar sus propios artículos.</p>
             <a target="_blank" href="https://karlos-kon-ka.github.io/Inicioweb/">
                 <img class="foto-registro" src="registro.avif" alt="Proyecto 1">
             </a>
         </div>
         <div class="proyecto">
-            <h3>2·PROYECTO</h3>
+            <h3>CALCULADORA</h3>
             <p>Calculadora hecha con: HTML - CSS Y JS.</p>
             <a target="_blank" href="https://karlos-kon-ka.github.io/memento/">
                 <img class="foto-registro" src="3976419.png" alt="Proyecto 2">
             </a>
         </div>
+   
+
+   
         <div class="proyecto">
-            <h3>3·PROYECTO</h3>
+            <h3>TRANSGRESOR</h3>
             <p>Aplicacion web, cuya funcion es,<br>
                 cambiar de días a horas y viceversa. 
                 <br>
@@ -59,60 +87,60 @@
             </a>
         </div>
         <div class="proyecto">
-            <h3>4·PROYECTO</h3>
+            <h3>TIENDA (ECOMMERCE)</h3>
             <p>Tienda web(Ecommerce). 
-                <br>
-                Tienda de ropa online (simulada). <br>
-                Con carrito, números de producto, zona de pago y confirmación de compra.             
+                PC Box es una cadena de tiendas 
+                especializadas en tecnología y productos informáticos, con presencia principalmente en España.             
             </p>
-            <a target="_blank" href="https://karlos-kon-ka.github.io/carrito/">
-                <img class="foto-registro" src="pexels-karolina-grabowska-4968390.jpg" alt="Proyecto 4">
+            <a target="_blank" href="https://karlos-kon-ka.github.io/Ecommerce-PCBOX/">
+                <img class="foto-registro" src="ecommerce marketing.jpeg" alt="Proyecto 4">
             </a>
         </div>
-    </section>
+   
+      </div>
+    
 
-    <section  id="objetivos">
-        <h2>OBJETIVOS</h2>
-        <div class="parrafo-background">
-            <br>
-            <p class="parra"><span>Impulsar</span> la experiencia del usuario con dinamismo en las páginas.</p>
-            <img class="foto-objetivos" src="pexels-cottonbro-studio-3585088.jpg" alt="">
-        </div>
-        <div class="parrafo-background">
-            <br>
-            <p><span>Garantizar</span> una funcionalidad clara y efectiva en cada aspecto del mismo.</p>
-            <img class="foto-objetivos" src="pexels-ksenia-chernaya-5766508.jpg" alt="">
-        </div>
-        <div class="parrafo-background">
-            <br>
-            <p><span>Optimizar</span> la disponibilidad y accesibilidad en dispositivos móviles. (Smartphones, tablets,etc).</p>
-            <img class="foto-objetivos" src="pexels-negative-space-34140.jpg" alt="">
-        </div>
-    </section>
 
-    <section  class="proyecto" class="adicionales">
-        <h1>Conocimientos adicionales</h1>
-        <div>
-            <h2>Ciberseguridad</h2>
-            <img src="Ciber.jpg" alt="">
-            <p>Conocimientos básicos acerca del mantenimiento y auditoria de webs.</p>
-        </div>
-    </section>
+      <div class="conocimientos">
 
-    <section class="miseccion" id="presentacion-habilidades">
-        <h2>¿QUIÉN SOY?</h2>
-        <img src="fotomia.jpg" alt="Tu Foto" class="foto2">
-        <p>Un apasionado del desarrollo web. <br>
-            Con experiencia creando y diseñando sitios webs con dinamismo y funcionalidad. <br>
-            Me esfuerzo por crear páginas efectivas y atractivas.</p>
-    </section>
+        <h3>¿Que habilidades tengo en procesos?</h3>
+        <p class="parra-cono"> Estas son mis habilidades actuales en estas áreas y
+             estoy dispuesto a seguir aprendiendo
+             y mejorando en ellas. Si tienes algún proyecto en mente en el que pueda ayudar, estaré encantado
+              de colaborar contigo.</p>
 
-    <section id="galeria">
-        <h2>OTROS INTERESES</h2>
-        <div class="gallery-container">
-            <!-- Galería u otros intereses -->
-        </div>
-    </section>
+           <div class="fotos-cono">
+            <img class="img-hab" src="fotoshop.png" alt="">
+            <div class="ejemplos">
+                <img class="fotos-fotoshop" id="transicion" src="foto20000.jpg" alt="">
+                <img class="fotos-fotoshop" id="transicion" src="foto10000.jpg" alt="">
+                <img class="fotos-fotoshop" id="transicion" src="foto20000.jpg" alt="">
+            </div>
+            <div class="ejemplos">
+                <img class="img-hab" src="unity.png" alt="">
+               <img class="video-uny" src="Captura de pantalla 2024-02-08 a las 19.14.07.png" alt="">
+
+            </div>
+            <div class="ejemplos">
+                <img class="img-hab" src="gptt.jpeg" alt="">
+                <p>Tengo experiencia en la creación y configuración de chatbots utilizando la tecnología avanzada de ChatGPT de OpenAI. Desde la generación de respuestas inteligentes hasta la
+                     integración en aplicaciones y sitios web, puedo dar vida a tus ideas conversacionales de una manera innovadora y eficaz.</p>
+
+            </div>
+
+
+           </div>   
+
+      </div>
+
+
+
+<div>
+
+</div>
+
+
+
    
     <button id="scrollToTopBtn" onclick="scrollToTop()">
         <span class="arrow">&#9650;</span>
