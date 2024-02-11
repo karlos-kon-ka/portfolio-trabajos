@@ -2,10 +2,34 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #f5eded;
+    background-color: #b89d9d;
+    font-size: 16px;
     cursor: url(cursor.png), auto;
     animation: colorChange 20s infinite;
 }
+#scrollToTopBtn {
+    background-color: #4CAF50; /* Color de fondo */
+    border: none; /* Sin borde */
+    color: white; /* Color del texto */
+    padding: 15px 25px; /* Espacio interno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Sin decoración de texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    
+    position: fixed;
+    bottom: 20px; /* Distancia desde la parte inferior */
+    left: 20px; /* Distancia desde la izquierda */
+    cursor: pointer; /* Cambiar el cursor al pasar */
+    border-radius:50%; /* Radio del borde */
+    z-index: 3; /* Capa z para estar por encima de otros elementos */
+    
+}
+
+#scrollToTopBtn .arrow {
+    font-size: 20px; 
+}
+
+
 
 .enlaces-pag{
     font-size: 20px;
@@ -161,42 +185,53 @@ header h1 {
 
 
 .conocimientos{
-   margin-top: 50px;
+   
    padding: 20px;
    text-align: center;
+   background: linear-gradient(pink, blue);
+   border: solid 2px;
+   border-radius: 16px;
+   margin: 30px;
+   
   
 }
 .conocimientos h3{
-    font-size: 50px;
-    font-family: 'Merriweather', serif;
-    background-color: #3bccdf;
+    background-color: #b30e0e;
+    letter-spacing: 3px;
+    padding: 10px;
     box-shadow: black 1px 1px 20px;
-    padding: 5px;
-    color: #2e2e29;
-    border-radius: 10px;
-    border: yellow solid 2px;
+    border-radius: 12px;
+    
+    font-size: 40px;
+    color: white;
+    font-family: 'Barlow', sans-serif;
 }
 .parra-cono{
     font-family: 'Nanum Gothic', sans-serif;
-    font-size: 40px;
-    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    margin: 80px;
+    background: linear-gradient(rgb(166, 173, 208),white);
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px black;
 
 }
 .fotos-cono{
     padding: 10px;
-    background-color: #f2eded9f;
+    
     padding: 40px;
     border-radius: 10px;
-    gap: 20px;
+    
    
 }
 
 
 .img-hab{
     height: 100%;
-    max-height: 300px;
+    max-height: 200px;
     width: 100%;
-    max-width: 300px;
+    max-width: 250px;
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
@@ -215,7 +250,8 @@ header h1 {
     padding: 20px 20px;
     border-radius: 10px;
     box-shadow: black 1px 1px 15px;
-    margin-top: 50px;
+    margin-top: 30px;
+    margin: 50px;
     border: 1px solid rgb(231, 9, 9);
 }
 .ejemplos p{
@@ -228,13 +264,13 @@ header h1 {
 .fotos-fotoshop{
     height: 100%;
     width: 100%;
-    max-width: 300px;
+    max-width: 250px;
     max-height: 300px;
-    display: flex;
-    justify-content: center;
+    
+    
     text-align: center;
     border-radius: 5px;
-    transition: all 1s;
+    
     margin-top: 20px;
 
 }
@@ -250,9 +286,6 @@ max-width: 700px;
 max-height: 650px;}
 
 
-
-
-
 .personal{
     display: flex;
     text-align: center;
@@ -261,10 +294,10 @@ max-height: 650px;}
     padding: 20px;
     background: linear-gradient(maroon, rgb(219, 219, 59));
     border-radius: 15px;
-    margin: 40px;
-    position: relative;
+    margin: 80px;
+    
     box-shadow:  1px 1px 15px black;
-    margin-top: 70px;
+    margin-top: 40px;
 }
 .personal h2{
     justify-content: center;
@@ -278,7 +311,7 @@ max-height: 650px;}
     justify-content: center;
     text-align: center;
     color: #eaeaea;
-    font-size: 35px;
+    font-size: 25px;
     font-family: 'Work Sans', sans-serif;
 }
 .personal img{
@@ -289,6 +322,83 @@ max-height: 650px;}
     border-radius: 10px;
 }
 
+.solido{
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px 25px;
+    background:linear-gradient(white, green);
+    transition: all 3s ease-in-out;
+    margin: 50px;
+    border-radius: 10px;
+    
+}
+
+
+.html{
+    width: 100%;
+    height: 100%;
+    max-width: 450px;
+    max-height: 520px;
+    border-radius: 10px;
+}
+
+.solido p {
+    color: #170b0b;
+    font-size: 25px;
+    font-family: 'Work Sans', sans-serif;
+    padding: 20px;
+    background-color: #eaeaea;
+    border-radius: 10px;
+    transition: color 0.5s ease; /* Ajustar la transición solo para el cambio de color del texto */
+}
+
+.solido p:hover {
+    background-color: #140c0c; /* Cambiar el color de fondo al pasar el ratón */
+    color: white;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Aplicar transiciones para ambos cambios de color */
+}
+
+
+
+
+.experiencia{
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #d7eaaf;
+    border-top: 5px solid rgb(34, 33, 33);
+    
+    text-align: center;
+
+}
+.experiencia img{
+    width: 100%;
+    height: 100%;
+    max-width: 350px;
+    max-height: 250px;
+    border: solid 1.5px pink;
+    border-radius: 12px;
+}
+.card1{
+    padding: 15px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px;
+    margin: 20px;
+    font-family: 'Montserrat', sans-serif;
+    
+    background: linear-gradient(rgb(137, 99, 105), rgb(192, 208, 115));
+}
+.card1 p{
+    font-size: 26px;
+    color: #eaeaea;
+    background: #797272;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px;
+}
 footer {
     background-color: #333;
     color: #fff;
@@ -396,3 +506,86 @@ footer {
         font-size: 20px;
     }
 }
+
+@media screen and (max-width: 700px) {
+    
+    body {
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+   
+    .solido .html {
+        max-width: 100%;
+    }
+
+    /* Ajustar el tamaño máximo de las imágenes dentro de .personal */
+    .personal img {
+        max-width: 100%;
+    }
+
+    /* Ajustar el tamaño máximo de las imágenes dentro de .slider ul li img */
+    .slider ul li img {
+        max-width: 100%;
+    }
+
+    
+    .fotos-fotoshop {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .solido .html {
+        max-width: 100%;
+    }
+
+    .personal img {
+        max-width: 100%;
+    }
+
+    .slider ul li img {
+        max-width: 100%;
+    }
+
+    .fotos-fotoshop {
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 360px) {
+    body {
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .solido,
+    .personal,
+    .slider ul li,
+    .fotos-fotoshop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .solido .html,
+    .personal img,
+    .slider ul li img,
+    .fotos-fotoshop {
+        max-width: 50%;
+        height: auto;
+    }
+
+    .fotos-fotoshop img {
+        max-width: 100%; /* Ajustar el ancho máximo de las imágenes de Photoshop */
+    }
+}
+
+

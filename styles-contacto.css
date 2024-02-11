@@ -140,3 +140,29 @@ form input {
     border-radius: 4px;
     resize: vertical;
 }
+
+
+@media screen and (max-width: 500px) {
+    header {
+        padding: 5px; /* Reduce el padding del encabezado */
+    }
+
+    nav a {
+        font-size: 18px; /* Reduce el tamaño del texto del menú */
+        margin: 0 10px; /* Reduce el margen entre elementos del menú */
+    }
+
+    button {
+        padding: 8px 16px; /* Reduce el padding del botón */
+    }
+
+    form {
+        max-width: 300px; /* Reduce el ancho máximo del formulario */
+    }
+
+    input,
+    .campo textarea {
+        padding: 8px; /* Reduce el padding de los campos de entrada */
+        font-size: 16px; /* Reduce el tamaño de fuente de los campos de entrada */
+    }
+}
