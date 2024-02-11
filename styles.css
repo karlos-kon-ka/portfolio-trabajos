@@ -186,35 +186,35 @@ header h1 {
 
 .conocimientos{
    
-   padding: 20px;
+   padding: 10px;
    text-align: center;
    background: linear-gradient(pink, blue);
-   border: solid 2px;
+   border: solid 1px;
    border-radius: 16px;
-   margin: 30px;
+   margin: 15px;
    
   
 }
 .conocimientos h3{
     background-color: #b30e0e;
-    letter-spacing: 3px;
-    padding: 10px;
+    letter-spacing: 1px;
+    padding: 5px;
     box-shadow: black 1px 1px 20px;
     border-radius: 12px;
     
-    font-size: 40px;
+    font-size: 30px;
     color: white;
     font-family: 'Barlow', sans-serif;
 }
 .parra-cono{
     font-family: 'Nanum Gothic', sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
-    padding: 20px;
-    margin: 80px;
+    padding: 10px;
+    margin: 20px;
     background: linear-gradient(rgb(166, 173, 208),white);
     border-radius: 10px;
-    box-shadow: 1px 1px 10px black;
+    box-shadow: 1px 1px 5px black;
 
 }
 .fotos-cono{
@@ -229,11 +229,19 @@ header h1 {
 
 .img-hab{
     height: 100%;
-    max-height: 200px;
+    max-height: 250px;
     width: 100%;
-    max-width: 250px;
+    max-width: 200px;
     border-radius: 10px;
     transition: transform 0.3s ease;
+}
+.video-uny{
+    
+    max-width: 350px;
+    max-height: 350px;
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 .img-hab:hover{
     transform: scale(1.1);
@@ -242,8 +250,8 @@ header h1 {
     display: flex;
     text-align: center;
     justify-content: center;
-    gap: 20px;
-    gap: 20px; 
+    
+    gap: 10px; 
     flex-wrap: wrap;
     color: #eaeaea;
     background:linear-gradient(white,green);
@@ -265,25 +273,15 @@ header h1 {
     height: 100%;
     width: 100%;
     max-width: 250px;
-    max-height: 300px;
+    max-height: 200px;
     
     
     text-align: center;
     border-radius: 5px;
     
-    margin-top: 20px;
+    margin-top: 10px;
 
 }
-.transicion{
-    transition-timing-function: linear;
-}
-.fotos-fotoshop:hover{
-    width: 500px;
-}
-.video-uny{width: 100%;
-height: 100%;
-max-width: 700px;
-max-height: 650px;}
 
 
 .personal{
@@ -463,6 +461,77 @@ footer {
 
 /*responsive*/
 
+@media screen and (max-width: 767px) {
+    .footer-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-menu li {
+        margin-bottom: 10px;
+    }
+
+    .footer-menu li:last-child {
+        margin-bottom: 0;
+    }
+
+    .footer-menu li a {
+        font-size: 14px;
+    }
+
+    .footer-menu li a img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .footer-menu li a {
+        font-size: 12px;
+    }
+
+    .footer-menu li a img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 767px) {
+    .experiencia {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card1 {
+        max-width: 90%;
+        margin: 20px 0;
+    }
+
+    .card1 img {
+        max-width: 100%;
+        height: auto;
+        max-height: 200px;
+    }
+
+    .card1 p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .card1 p {
+        font-size: 16px;
+    }
+}
+
+
+
+
 @media screen and (max-width: 768px) {
     .trabajos {
         margin-top: 90px;
@@ -520,14 +589,15 @@ footer {
         max-width: 100%;
     }
 
-    /* Ajustar el tamaño máximo de las imágenes dentro de .personal */
+   
     .personal img {
         max-width: 100%;
     }
 
-    /* Ajustar el tamaño máximo de las imágenes dentro de .slider ul li img */
+    
     .slider ul li img {
         max-width: 100%;
+        height: auto;
     }
 
     
@@ -559,13 +629,15 @@ footer {
         max-width: 100%;
     }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 500px) {
+    /* Restricción del tamaño máximo del cuerpo */
     body {
-        max-width: 360px;
+        max-width: 500px;
         margin-left: auto;
         margin-right: auto;
     }
 
+    /* Ajuste de los elementos para mantener las proporciones */
     .solido,
     .personal,
     .slider ul li,
@@ -575,16 +647,35 @@ footer {
         justify-content: center;
     }
 
+    /* Establecer el ancho máximo de los elementos a la mitad del contenedor */
     .solido .html,
     .personal img,
     .slider ul li img,
     .fotos-fotoshop {
         max-width: 50%;
-        height: auto;
+        height: auto; /* Ajustar la altura automáticamente para mantener la proporción */
     }
 
+    /* Ajustar el ancho máximo de las imágenes de fotos de Photoshop */
     .fotos-fotoshop img {
-        max-width: 100%; /* Ajustar el ancho máximo de las imágenes de Photoshop */
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 499px) {
+    .slider {
+        margin-top: 200px; /* Reducir el margen superior */
+    }
+
+    .slider ul li {
+        width: 100%; 
+    }
+
+    .slider ul li img {
+        width: 100%;
+        height: 100%;
+        max-width: 300px; /* Reducir el ancho máximo de las imágenes */
+        max-height: 250px;
+        margin: 0 auto; /* Centrar las imágenes */
     }
 }
 
