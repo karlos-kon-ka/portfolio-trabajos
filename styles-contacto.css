@@ -14,6 +14,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
+    
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease; /* Añadida transición al color de fondo */
     
@@ -57,6 +58,7 @@ section {
     background-color: #333;
     border-top: 2px solid #2a2a2a;
     text-align: center;
+    margin-top: 120px;
 }
 
 h2 {

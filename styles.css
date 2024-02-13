@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #b89d9d;
+    background-color: #c0c76e;
     font-size: 16px;
     cursor: url(cursor.png), auto;
     animation: colorChange 20s infinite;
@@ -105,7 +105,7 @@ header h1 {
     width: 20%; 
     margin-bottom: 50px; 
     text-align: center; 
-    background:linear-gradient(white,rgb(17, 168, 206));
+    background:linear-gradient(white,rgb(32, 113, 168));
     border-radius: 10px;
     padding: 20px;
     transition: transform 0.3s ease;
@@ -185,7 +185,7 @@ header h1 {
    
    padding: 10px;
    text-align: center;
-   background: linear-gradient(rgb(201, 138, 149), rgb(52, 52, 154));
+   background: linear-gradient(rgb(82, 200, 27), rgb(101, 101, 210));
    border: solid 1px;
    border-radius: 16px;
    margin: 15px;
@@ -196,7 +196,7 @@ header h1 {
     background-color: #b30e0e;
     letter-spacing: 1px;
     padding: 5px;
-    box-shadow: black 1px 1px 20px;
+    box-shadow: black 1px 1px 8px;
     border-radius: 12px;
     
     font-size: 30px;
