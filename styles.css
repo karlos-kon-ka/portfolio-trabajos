@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    
     font-family: 'Arial', sans-serif;
     background-color: #c0c76e;
     font-size: 16px;
@@ -44,7 +45,7 @@ body {
 }
 
 header {
-    background-color: #ae3a3a;
+    background-color: #c93d3d;
     padding: 15px 20px;
     text-align: center;
     position: fixed;
@@ -62,7 +63,7 @@ header h1 {
 }
 
 .trabajos {
-    margin-top: 90px;
+    
     align-items: center;
     box-shadow: 1px 1px 10px black;
     
@@ -74,6 +75,7 @@ header h1 {
     border-radius: 15px;
     margin-left: 30px;
     margin-right: 30px;
+    margin-bottom: 20px;
     border: solid 2px;
 }
 
@@ -81,13 +83,10 @@ header h1 {
     display: flex;
     text-align: center;
     justify-content: center;
-    
-   
-    
 }
 .titulos h4{
     background-color: #b30e0e;
-    letter-spacing: 3px;
+   
     padding: 10px;
     box-shadow: black 1px 1px 20px;
     border-radius: 12px;
@@ -105,7 +104,7 @@ header h1 {
     width: 20%; 
     margin-bottom: 50px; 
     text-align: center; 
-    background:linear-gradient(white,rgb(32, 113, 168));
+    background:linear-gradient(rgb(176, 176, 176),rgb(32, 113, 168));
     border-radius: 10px;
     padding: 20px;
     transition: transform 0.3s ease;
@@ -133,8 +132,9 @@ header h1 {
     margin-bottom: 10px;
     font-size: 20px;
     font-family: 'Raleway', sans-serif;
-    color: black;
+    color: rgb(255, 252, 252);
     transition: transform 0.3s ease;
+    
 }
 
 .proyecto:hover p {
@@ -395,6 +395,91 @@ header h1 {
     border-radius: 8px;
     margin: 5px;
 }
+
+.python{
+    
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.img_py{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img_py img{
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    max-width: 250px;
+    max-height: 250px;
+}
+.parra_py {
+    border-color: #fff;
+    border-width: 3px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
+    align-items: center;
+    color: #eee;
+    margin: 2em;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 20px black;
+    background: linear-gradient(rgb(127, 188, 218), rgb(207, 204, 204));
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    animation: border-animation 4s infinite alternate;
+}
+
+@keyframes border-animation {
+    0% {
+        border-color: #fff;
+    }
+    50% {
+        border-color: #ff0000; /* Cambia el color a tu gusto */
+    }
+    100% {
+        border-color: #fff;
+    }
+}
+.parra_py {
+    border-color: #fff;
+    border-width: 3px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
+    align-items: center;
+    color: #eee;
+    margin: 2em;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 20px black;
+    background: linear-gradient(rgb(127, 188, 218), rgb(207, 204, 204));
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    animation: border-animation 4s infinite alternate;
+}
+
+@keyframes border-animation {
+    0% {
+        border-color: #fff;
+    }
+    50% {
+        border-color: #ff0000; /* Cambia el color a tu gusto */
+    }
+    100% {
+        border-color: #fff;
+    }
+}
+
+
+
+  
 footer {
     background-color: #333;
     color: #fff;
@@ -488,7 +573,19 @@ footer {
     .footer-menu li a {
         font-size: 12px;
     }
-
+    .personal{
+        display: flex;
+        text-align: center;
+       
+        align-items: center;
+        padding: 10px;
+        background: linear-gradient(maroon, rgb(219, 219, 59));
+        border-radius: 8px;
+        font-size: 10px;
+        
+        box-shadow:  1px 1px 8px black;
+        
+    }
     .footer-menu li a img {
         width: 25px;
         height: 25px;
@@ -567,6 +664,7 @@ footer {
         max-width: 250px;
         max-height: 300px;
     }
+   
     
     .personal h2,
     .personal p {
@@ -685,7 +783,11 @@ footer {
         padding: 3px;
         margin-left: 5px;
         justify-content: space-around;
-        margin-top: 10px;
+        margin-top: 2px;
+        font-size: 8px;
+    }
+    .proyecto p{
+        font-size: 15px;
     }
     .proyecto h3 {
 
@@ -701,9 +803,11 @@ footer {
         align-items: center;
     }
     .trabajos{
-        margin: 10px;
+       
         display: flex;
-        padding: 0;
+        padding: 5px;
+       
+
         
     }
     .fotos-len{
@@ -731,6 +835,9 @@ footer {
      .personal{
         padding: 5px;
         margin: 10px;
+     }
+     .ejemplos p{
+        font-size: 15px;
      }
 }
 
