@@ -16,13 +16,11 @@ header {
     z-index: 1000;
     
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease; /* Añadida transición al color de fondo */
+    /* Añadida transición al color de fondo */
     
 }
 
-header:hover {
-    background-color: #14ceea; /* Cambia el color de fondo al pasar el ratón */
-}
+
 header h1{
     font-family: 'EB Garamond', serif;
 }
@@ -30,9 +28,7 @@ nav {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    opacity: 0; /* Inicialmente, la opacidad está configurada a 0 */
-    transform: translateY(-20px); /* Movida hacia arriba */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Añadidas transiciones */
+     /* Añadidas transiciones */
 }
 
 header:hover nav {
@@ -146,7 +142,8 @@ form input {
 
 @media screen and (max-width: 500px) {
     header {
-        padding: 5px; /* Reduce el padding del encabezado */
+        padding: 5px;
+       /* Reduce el padding del encabezado */
     }
 
     nav a {
@@ -159,12 +156,20 @@ form input {
     }
 
     form {
-        max-width: 300px; /* Reduce el ancho máximo del formulario */
+        max-width: 300px;
+         /* Reduce el ancho máximo del formulario */
     }
 
     input,
     .campo textarea {
         padding: 8px; /* Reduce el padding de los campos de entrada */
         font-size: 16px; /* Reduce el tamaño de fuente de los campos de entrada */
+    }
+    section {
+        padding: 60px 20px;
+        background-color: #333;
+        border-top: 2px solid #2a2a2a;
+        text-align: center;
+        margin-top: 80px;
     }
 }
