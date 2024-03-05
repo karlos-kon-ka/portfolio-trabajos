@@ -5,25 +5,39 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #c0c76e;
     font-size: 16px;
-    cursor: url(cursor.png), auto;
-    animation: colorChange 20s infinite;
+    
 }
 #scrollToTopBtn {
-    background-color: #4CAF50; /* Color de fondo */
-    border: none; /* Sin borde */
-    color: white; /* Color del texto */
-    padding: 15px 25px; /* Espacio interno */
-    text-align: center; /* Alineación del texto */
-    text-decoration: none; /* Sin decoración de texto */
-    font-size: 16px; /* Tamaño de la fuente */
+    background-color: #4CAF50; 
+    border: none; 
+    color: white; 
+    padding: 15px 25px;
+    text-align: center; 
+    text-decoration: none;
+    font-size: 16px; 
     
     position: fixed;
-    bottom: 20px; /* Distancia desde la parte inferior */
-    left: 20px; /* Distancia desde la izquierda */
-    cursor: pointer; /* Cambiar el cursor al pasar */
-    border-radius:50%; /* Radio del borde */
+    bottom: 20px; 
+    left: 20px; 
+    cursor: pointer; 
+    border-radius:50%; 
     z-index: 3; /* Capa z para estar por encima de otros elementos */
     
+}
+.fotos-len {
+    animation: shake 0.5s ease-in-out 1.5s 2; /* Delay animation start for 3 seconds, play 2 times */
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    35% { transform: translateX(-3px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-3px); }
+    85% { transform: translateX(-1.5px); }
+    100% { transform: translateX(0); }
+}
+ul {
+    list-style: none;
 }
 
 #scrollToTopBtn .arrow {
@@ -56,6 +70,7 @@ header {
     animation: bounceOnce 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
     opacity: 1;
     transition: opacity 0.5s ease;
+    border-radius: 8px;
 }
 
 header h1 {
@@ -185,7 +200,7 @@ header h1 {
    
    padding: 10px;
    text-align: center;
-   background: linear-gradient(rgb(82, 200, 27), rgb(101, 101, 210));
+   background: linear-gradient(rgb(82, 200, 27), rgb(82, 82, 99));
    border: solid 1px white;
    box-shadow: 1px 1px 10px white;
    border-radius: 16px;
@@ -194,11 +209,11 @@ header h1 {
   
 }
 .conocimientos h3{
-    background-color: #b30e0e;
+    
     letter-spacing: 1px;
     padding: 5px;
-    box-shadow: black 1px 1px 8px;
-    border-radius: 12px;
+    text-shadow: 1px 1px 6px black;
+    
     
     font-size: 30px;
     color: white;
@@ -428,65 +443,30 @@ header h1 {
     z-index: 3;
 }
 .parra_py {
-    border-color: #fff;
-    border-width: 3px;
     display: flex;
-    justify-content: center;
-    text-align: center;
-    border-radius: 8px;
     align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    text-shadow:  1px 1px 8px black;
+  
+   
+    text-align: center;
+    border-radius: 2px;
+  
+    
     color: #eee;
-    margin: 2em;
-    box-sizing: border-box;
-    box-shadow: 1px 1px 20px black;
-    background: linear-gradient(rgb(127, 188, 218), rgb(207, 204, 204));
-    overflow: hidden;
-    border-radius: 20px;
-    position: relative;
-    animation: border-animation 4s infinite alternate;
+    
+    
+    
+    
+   
+}
+.parra_py p{
+    font-size: 40px;
 }
 
-@keyframes border-animation {
-    0% {
-        border-color: #fff;
-    }
-    50% {
-        border-color: #ff0000; /* Cambia el color a tu gusto */
-    }
-    100% {
-        border-color: #fff;
-    }
-}
-.parra_py {
-    border-color: #fff;
-    border-width: 3px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    border-radius: 8px;
-    align-items: center;
-    color: #eee;
-    margin: 2em;
-    box-sizing: border-box;
-    box-shadow: 1px 1px 20px black;
-    background: linear-gradient(rgb(127, 188, 218), rgb(207, 204, 204));
-    overflow: hidden;
-    border-radius: 20px;
-    position: relative;
-    animation: border-animation 4s infinite alternate;
-}
 
-@keyframes border-animation {
-    0% {
-        border-color: #fff;
-    }
-    50% {
-        border-color: #ff0000; /* Cambia el color a tu gusto */
-    }
-    100% {
-        border-color: #fff;
-    }
-}
+
 
 
 
@@ -601,9 +581,7 @@ footer {
         width: 25px;
         height: 25px;
     }
-    .conocimientos{
-        
-    }
+    
 }
 
 
