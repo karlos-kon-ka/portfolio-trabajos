@@ -1,52 +1,14 @@
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-}
-
-window.onscroll = function () {
-    scrollFunction();
-};
-
-function scrollFunction() {
-    var scrollToTopBtn = document.getElementById("scrollToTopBtn");
-    var proyectosSection = document.getElementById("proyectos");
-    var header = document.getElementById("myHeader");
-
-    var proyectosBottom = proyectosSection.offsetTop + proyectosSection.offsetHeight;
-
-    if (
-        document.body.scrollTop > proyectosBottom ||
-        document.documentElement.scrollTop > proyectosBottom
-    ) {
-        scrollToTopBtn.style.display = "block";
-        header.classList.add("hidden");
-    } else {
-        scrollToTopBtn.style.display = "none";
-        header.classList.remove("hidden");
-    }
-
-    var proyectosTop = proyectosSection.offsetTop;
-
-    if (
-        document.body.scrollTop > proyectosTop ||
-        document.documentElement.scrollTop > proyectosTop
-    ) {
-        header.classList.add("hidden");
-    } else {
-        header.classList.remove("hidden");
-    }
-}
-
-var headerHeight = document.querySelector('header').offsetHeight;
-
 document.addEventListener('scroll', function () {
     handleScroll();
 });
 
-document.getElementById("scrollToTopBtn").addEventListener("click", function () {
-    document.getElementById("myHeader").classList.remove("hidden");
+
+window.addEventListener('scroll', function () {
+    scrollFunction();
 });
 
 function handleScroll() {
+    var headerHeight = document.querySelector('header').offsetHeight; // Calcular la altura del encabezado cada vez que se llame a handleScroll
     var scrollPosition = window.scrollY || window.pageYOffset;
     var opacity = 1 - (scrollPosition / headerHeight);
     opacity = Math.min(1, Math.max(0, opacity));
@@ -57,9 +19,54 @@ function handleScroll() {
 
 
 
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("scrollToTopBtn").style.display = "block";
+  } else {
+    document.getElementById("scrollToTopBtn").style.display = "none";
+  }
+}
+
+
+
+document.getElementById("scrollToTopBtn").onclick = function() {
+    scrollToTop();
+  };
+  
+  function scrollToTop() {
+    const scrollStep = -window.scrollY / (1000 / 15);
+    const scrollInterval = setInterval(function() {
+      if (window.scrollY !== 0) {
+        window.scrollBy(0, scrollStep);
+      } else {
+        clearInterval(scrollInterval);
+      }
+    }, 15);
+  }
+  
 
 
 
 
 
+  // Obtener el elemento .snake
+const snake = document.getElementById('snake');
 
+// Función para mostrar la serpiente
+function showSnake() {
+    snake.style.visibility = 'visible';
+}
+
+// Detectar el evento de scroll en la ventana
+window.addEventListener('scroll', function() {
+    // Obtener la posición actual del scroll
+    const scrollPosition = window.scrollY;
+
+    // Si el scroll ha alcanzado cierta posición (por ejemplo, 300px desde la parte superior)
+    if (scrollPosition >= 300) {
+        // Mostrar la serpiente
+        showSnake();
+    }
+});

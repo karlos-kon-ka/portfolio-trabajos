@@ -5,35 +5,55 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #c0c76e;
     font-size: 16px;
+    scroll-behavior: smooth;
     
 }
-#scrollToTopBtn {
-    background-color: #4CAF50; 
-    border: none; 
-    color: white; 
-    padding: 15px 25px;
-    text-align: center; 
-    text-decoration: none;
-    font-size: 16px; 
-    
+body::after {
+    content: '';
     position: fixed;
-    bottom: 20px; 
-    left: 20px; 
-    cursor: pointer; 
-    border-radius:50%; 
-    z-index: 3; /* Capa z para estar por encima de otros elementos */
-    
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    height: 1px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
 }
+
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+    background-color: #ebf3f3;
+    border: none;
+    color: rgb(52, 46, 46);
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+}
+
+#scrollToTopBtn:hover,
+#scrollToTopBtn:focus {
+    opacity: 0.8;
+}
+
 .fotos-len {
-    animation: shake 0.5s ease-in-out 1.5s 2; /* Delay animation start for 3 seconds, play 2 times */
+    animation: shake 0.5s ease-in-out 1s 2; 
 }
 @keyframes shake {
     0% { transform: translateX(0); }
     25% { transform: translateX(-5px); }
-    35% { transform: translateX(-3px); }
+    35% { transform: translateX(-1px); }
     50% { transform: translateX(5px); }
     75% { transform: translateX(-3px); }
     85% { transform: translateX(-1.5px); }
+    95% { transform: translateX(-0.5px); }
     100% { transform: translateX(0); }
 }
 ul {
@@ -62,14 +82,14 @@ header {
     background-color: #c93d3d;
     padding: 15px 20px;
     text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    
+   
+    
+    
     box-shadow: 0 2px 5px rgba(253, 252, 252, 0.1);
-    animation: bounceOnce 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+   
     opacity: 1;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.3s ease;
     border-radius: 8px;
 }
 
@@ -164,7 +184,7 @@ header h1 {
 
 .slider {
     overflow: hidden; 
-    margin-top: 100px;
+   
     width: 100%; 
     position: relative; 
 }
@@ -179,8 +199,8 @@ header h1 {
 
 .slider ul li {
     width: 100%;
-    animation: slide 12s infinite; 
-    animation-delay: 3s;
+    
+    
     margin: 0 5px;
 }
 
@@ -192,8 +212,29 @@ header h1 {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 40px;
 }
+.snake {
+    background: url(snake.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%; 
+    width: 100%;
+    max-width: 450px; 
+    
+    position: absolute; 
+    z-index: -1;
+    animation: snakeAnimation 10s linear  infinite;
+    
+}
+
+@keyframes snakeAnimation {
+    0% { transform: translateX(-100%); } 
+    
+    100% { transform: translateX(200%); } 
+}
+
+
 
 
 .conocimientos{
@@ -304,12 +345,12 @@ header h1 {
     flex-direction: column-reverse;
     align-items: center;
     padding: 20px;
-    background: linear-gradient(maroon, rgb(219, 219, 59));
+    background: linear-gradient(rgb(182, 87, 87), rgb(219, 219, 59));
     border-radius: 15px;
     margin: 80px;
     
     box-shadow:  1px 1px 15px black;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 .personal h2{
     justify-content: center;
@@ -384,7 +425,10 @@ header h1 {
     padding: 20px;
     display: flex;
     justify-content: space-around;
-    background-color: #d7eaaf;
+    background: url(ofi.jpeg);
+    background-position: center; 
+    background-size: cover;
+    background-repeat: no-repeat;    
     border-top: 5px solid rgb(34, 33, 33);
     
     text-align: center;
@@ -398,7 +442,7 @@ header h1 {
     border: solid 1.5px pink;
     border-radius: 12px;
 }
-.card1{
+.card1 {
     padding: 15px;
     width: 100%;
     max-width: 500px;
@@ -406,8 +450,10 @@ header h1 {
     margin: 20px;
     font-family: 'Montserrat', sans-serif;
     
-    background: linear-gradient(rgb(137, 99, 105), rgb(192, 208, 115));
+    /* Utilizar rgba en lugar de un gradiente lineal para ajustar la transparencia */
+    background: rgba(137, 99, 105, 0.7); /* Aquí el último valor (0.7) controla la opacidad */
 }
+
 .card1 p{
     font-size: 26px;
     color: #eaeaea;
@@ -463,6 +509,7 @@ header h1 {
 }
 .parra_py p{
     font-size: 40px;
+    margin: 50px;
 }
 
 
@@ -472,7 +519,7 @@ header h1 {
 
   
 footer {
-    background-color: #333;
+    background-color: #1a1919;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -817,7 +864,7 @@ footer {
    
         padding: 5px;
         text-align: center;
-        background: linear-gradient(pink, blue);
+        
         
         border-radius: 14px;
         margin: 5px;
@@ -838,6 +885,27 @@ footer {
         max-width: 150px;
         max-height: 100px;
      }
+     .parra_py p{font-size: 25px;}
+     .snake {
+        background: url(snake.gif);
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%; 
+        width: 100%;
+        padding: 90px;
+        max-width: 200  px; 
+        
+        position: absolute; 
+        z-index: -1;
+        animation: snakeAnimation 10s linear  infinite;
+        
+    }
+    
+    @keyframes snakeAnimation {
+        0% { transform: translateX(-100%); } 
+        
+        100% { transform: translateX(70%); } 
+    }
      
     header {
     background-color: #c93d3d;
