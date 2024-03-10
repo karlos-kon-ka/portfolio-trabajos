@@ -5,18 +5,8 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #c0c76e;
     font-size: 16px;
-    scroll-behavior: smooth;
     
-}
-body::after {
-    content: '';
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 1px;
-    height: 1px;
-    background-color: transparent;
-    transition: background-color 0.3s ease;
+    
 }
 
 
@@ -63,8 +53,24 @@ ul {
 #scrollToTopBtn .arrow {
     font-size: 20px; 
 }
-
-
+.intro{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flexi{
+    flex: 1;
+    min-width: 300px;
+    
+}
+.flexi:first-child{
+    flex: 2;
+    padding: 20px;
+    margin: 10;
+}
+.flexi div{
+    padding: 15px;
+    margin: 15px;
+}
 
 .enlaces-pag{
     font-size: 20px;
@@ -215,24 +221,22 @@ header h1 {
     margin-top: 40px;
 }
 .snake {
-    background: url(snake.gif);
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%; 
-    width: 100%;
-    max-width: 450px; 
-    
-    position: absolute; 
-    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
     animation: snakeAnimation 10s linear  infinite;
     
 }
-
-@keyframes snakeAnimation {
-    0% { transform: translateX(-100%); } 
+.snake img{
     
-    100% { transform: translateX(200%); } 
+    height: 100%; 
+    width: 100%;
+    max-width: 450px; 
+    margin: 0;
+    filter: drop-shadow(1px 1px 10px white);
 }
+
 
 
 
@@ -467,7 +471,7 @@ header h1 {
     
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 0px;
     margin-bottom: 50px;
 }
 .img_py{
@@ -480,7 +484,7 @@ header h1 {
     border-radius: 5px;
     height: 100%;
     width: 100%;
-    max-width: 250px;
+    max-width: 450px;
     max-height: 210px;
     transition: transform 0.3s ease;
 }
@@ -803,6 +807,20 @@ footer {
     .slider ul{
         gap: 5px;
     }
+    header {
+        background-color: #c93d3d;
+        padding: 15px 20px;
+        text-align: center;
+        
+       
+        
+        
+        box-shadow: 0 2px 5px rgba(253, 252, 252, 0.1);
+       
+        opacity: 1;
+        transition: opacity 0.3s ease;
+        border-radius: 8px;
+    }
 
     .slider ul li {
         width: 100%; 
@@ -887,25 +905,16 @@ footer {
      }
      .parra_py p{font-size: 25px;}
      .snake {
-        background: url(snake.gif);
-        background-position: center;
-        background-repeat: no-repeat;
+        z-index: -1;
+        animation: snakeAnimation 6s linear  infinite;
+        
+    }
+    .snake img{
+        
         height: 100%; 
         width: 100%;
-        padding: 90px;
-        max-width: 200  px; 
-        
-        position: absolute; 
-        z-index: -1;
-        animation: snakeAnimation 10s linear  infinite;
-        
-    }
+        max-width: 250px; 
     
-    @keyframes snakeAnimation {
-        0% { transform: translateX(-100%); } 
-        
-        100% { transform: translateX(70%); } 
-    }
      
     header {
     background-color: #c93d3d;
@@ -917,9 +926,9 @@ footer {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(253, 252, 252, 0.1);
-    animation: bounceOnce 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    
     opacity: 1;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;}
 }
      
 }

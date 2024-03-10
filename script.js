@@ -52,21 +52,4 @@ document.getElementById("scrollToTopBtn").onclick = function() {
 
 
   // Obtener el elemento .snake
-const snake = document.getElementById('snake');
 
-// Función para mostrar la serpiente
-function showSnake() {
-    snake.style.visibility = 'visible';
-}
-
-// Detectar el evento de scroll en la ventana
-window.addEventListener('scroll', function() {
-    // Obtener la posición actual del scroll
-    const scrollPosition = window.scrollY;
-
-    // Si el scroll ha alcanzado cierta posición (por ejemplo, 300px desde la parte superior)
-    if (scrollPosition >= 300) {
-        // Mostrar la serpiente
-        showSnake();
-    }
-});
